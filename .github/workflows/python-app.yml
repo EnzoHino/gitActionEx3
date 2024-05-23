@@ -28,4 +28,8 @@ jobs:
 
     - name: Test with coverage
       run: |
-        - covarage run app
+        - covarage run -m coverage.py
+
+    - name: Result
+      run: coverage report
+      
