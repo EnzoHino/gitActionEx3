@@ -6,7 +6,7 @@ COPY ./app.py .
 COPY ./app_teste.py .
 COPY ./requeriments.txt .
   
-RUN pip install -r requeriments.txt
+RUN pip install -r requerements.txt
 
 EXPOSE 5000
 
