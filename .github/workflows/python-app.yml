@@ -35,41 +35,9 @@ jobs:
     - name: Docker Build & Push Action
       uses: mr-smithers-excellent/docker-build-push@v6.4
       with:
-        image: 
-        tags: # optional
-        # Target Docker registry
-        registry: 
-        # Location of Dockerfile, if not Dockerfile in root directory
-        dockerfile: # optional, default is Dockerfile
-        # Directory to run `docker build` from, if not project root
-        directory: # optional
-        # Docker build arguments passed via --build-arg
-        buildArgs: # optional
-        # Docker build labels passed via --label
-        labels: # optional
-        # Docker build target passed via --target
-        target: # optional
-        # Docker build platform passed via --platform
-        platform: # optional
-        # Docker build ssh options passed via --ssh
-        ssh: # optional
-        # Docker registry username
+        image: yudihino/image
+        tags: 1
+        dockerfile: dockerfile
         username: # optional
         # Docker registry password
         password: # optional
-        # GitHub organization to push image to (if not current)
-        gitHubOrg: # optional
-        # Adds latest tag to auto-generated GitOps tag
-        addLatest: # optional, default is false
-        # Suffixes a build timestamp to the branch-based Docker tag
-        addTimestamp: # optional, default is false
-        # Enables Docker BuildKit support
-        enableBuildKit: # optional, default is false
-        # Builds image with buildx to support multiple platforms
-        multiPlatform: # optional, default is false
-        # Disables setting up docker-container driver
-        overrideDriver: # optional, default is false
-        # Flag for disabling the login & push steps, set to true by default
-        pushImage: # optional, default is true
-              
-          
