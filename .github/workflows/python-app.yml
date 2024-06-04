@@ -38,6 +38,7 @@ jobs:
         image: yudihino/image
         tags: 1
         dockerfile: dockerfile
-        username: # optional
+        registry: docker.io
+        username: ${{ secrets.USER_DOCKER }}
         # Docker registry password
-        password: # optional
+        password: ${{ secrets.PASSWORD_DOCKER }}
