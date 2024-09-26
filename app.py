@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/') 
 def devops(): 
-  return '<center><h1><font color=red>Germinare Tech, EU AMO PINTO ROXAO AIAIAIAI OZILLLL VAI</center>' 
+  return '<center><h1><font color=red>Germinare Tech, EU AMO PINTAOZAO GRANDAO ROXAO AIAIAIAI OZILLLL VAI</center>' 
   
 if __name__ == '__main__': 
   app.run(debug=True, host='0.0.0.0', port=3782) 
