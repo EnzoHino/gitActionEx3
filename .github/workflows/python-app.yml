@@ -32,13 +32,9 @@ jobs:
     - name: Result
       run: coverage report
 
-    - name: Docker Build & Push Action
-      uses: mr-smithers-excellent/docker-build-push@v6.4
-      with:
-        image: yudihino/image
-        tags: 1
-        dockerfile: dockerfile
-        registry: docker.io
-        username: ${{ secrets.USER_DOCKER }}
-        # Docker registry password
-        password: ${{ secrets.PASSWORD_DOCKER }}
+    - name: Deploy no EC2 - AWS
+      run: |
+        echo "Conectando no EC2"
+        echo "${{secrets.AWS_PEM}}" > private_key && chmod 600 private_key 
+        ssh -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-18-204-100-152.compute-1.amazonaws.com "
+            cd gitActionEx3/;git pull;./executar.sh"
