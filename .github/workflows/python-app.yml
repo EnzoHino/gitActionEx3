@@ -38,3 +38,9 @@ jobs:
         echo "${{secrets.AWS_PEM}}" > private_key && chmod 600 private_key 
         ssh -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-18-204-100-152.compute-1.amazonaws.com "
             cd gitActionEx3/;git pull;./IniciarApp.sh"
+
+    - name: Render Deploy Actions
+      uses: johnbeynon/render-deploy-action@v0.0.8
+      with: 
+        service-id: srv-crr0rqjv2p9s73e96m1g
+        api-key: rnd_Im5n9SOAN2yFmN1a2Cvs8c5VgSLz
